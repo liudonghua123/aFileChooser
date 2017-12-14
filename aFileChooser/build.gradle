@@ -3,18 +3,18 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        //classpath 'com.android.tools.build:gradle:3.0.1'
     }
 }
 apply plugin: 'com.android.library'
 
 dependencies {
-    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:support-v4:27.0.2'
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion = '25.0.2'
+    compileSdkVersion 27
+    buildToolsVersion = '27.0.2'
 
     sourceSets {
         main {
@@ -22,5 +22,11 @@ android {
             java.srcDirs = ['src']
             res.srcDirs = ['res']
         }
+    }
+}
+repositories {
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
     }
 }
